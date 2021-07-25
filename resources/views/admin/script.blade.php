@@ -1,4 +1,22 @@
 
+
+{{--add new role model Start--}}
+
+<script type="text/javascript">
+    function toggleModal(roleModel){
+        document.getElementById(roleModel).classList.toggle("hidden");
+        document.getElementById(roleModel + "-backdrop").classList.toggle("hidden");
+        document.getElementById(roleModel).classList.toggle("flex");
+        document.getElementById(roleModel + "-backdrop").classList.toggle("flex");
+    }
+</script>
+
+{{--add new role model end--}}
+
+
+
+
+
 <script>
     /*Toggle dropdown list*/
     function toggleDD(myDropMenu) {
@@ -32,3 +50,8 @@
         }
     }
 </script>
+{{--alpine js for dropdown menus--}}
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+
+
