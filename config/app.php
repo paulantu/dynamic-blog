@@ -162,6 +162,16 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
+
+        //image intervention
+        Intervention\Image\ImageServiceProvider::class,
+
+//        social media intigration path
+        Jorenvh\Share\Providers\ShareServiceProvider::class,
+//Sweet alert
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -231,6 +241,16 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+
+//image intervention
+        'Image' => Intervention\Image\Facades\Image::class,
+
+
+        //        social media intigration path
+        'Share' => Jorenvh\Share\ShareFacade::class,
+
+//        sweet alert
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
     ],
 
 ];

@@ -12,9 +12,9 @@
             <p class="leading-normal text-2xl mb-8">
                 Sub-hero message, not too long and not too short. Make it just right!
             </p>
-            <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <a href="{{ url('/contact-us') }}" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                 Subscribe
-            </button>
+            </a>
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
@@ -360,82 +360,71 @@
         </div>
     </div>
 </section>
-<section class="bg-white border-b py-8">
+
+
+
+
+
+
+
+
+
+<section class="bg-white border-b py-16" id="blog">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Title
+            Latest Blog
         </h1>
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                        xGETTING STARTED
-                    </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
-                        Lorem ipsum dolor sit amet.
+
+        @foreach($blogPosts as $post)
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                    <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                        @php( $image = json_decode($post->images))
+                        <img src="{{ asset($image[0]) }}" alt="blog thumbnail">
+                        <p class="w-full text-gray-600 text-xs md:text-sm px-6 uppercase">
+                            {{ $post->category->cat_name }}
+                        </p>
+                        <div class="w-full font-bold text-xl text-gray-800 px-6">
+                            {{ $post->title }}
+                        </div>
+                        <div class="text-gray-800 text-base px-6 mb-5">
+                            <p class="">
+                                {!! Str::limit(html_entity_decode( $post->description ), 200) !!}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="flex items-center justify-start">
+                        <a href="{{ url('author/blog/'.$post->slug) }}" class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            Reed more
+                        </a>
                     </div>
-                    <p class="text-gray-800 text-base px-6 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                    </p>
-                </a>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                <div class="flex items-center justify-start">
-                    <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                        Action
-                    </button>
                 </div>
             </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                        xGETTING STARTED
-                    </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
-                        Lorem ipsum dolor sit amet.
-                    </div>
-                    <p class="text-gray-800 text-base px-6 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                    </p>
-                </a>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                <div class="flex items-center justify-center">
-                    <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                        Action
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
-                        xGETTING STARTED
-                    </p>
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
-                        Lorem ipsum dolor sit amet.
-                    </div>
-                    <p class="text-gray-800 text-base px-6 mb-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
-                    </p>
-                </a>
-            </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                <div class="flex items-center justify-end">
-                    <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                        Action
-                    </button>
-                </div>
-            </div>
+        @endforeach
+
+
+        <div class="flex items-center justify-center ml-4">
+            <a href="{{ url('author/blog') }}" class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Load More..
+            </a>
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
 
 <!-- Change the colour #f8fafc to match the previous section colour -->
 <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

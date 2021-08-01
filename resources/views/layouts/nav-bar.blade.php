@@ -1,7 +1,7 @@
 <nav id="header" class="fixed w-full z-30 top-0 text-white">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="{{ url('/') }}">
                 <!--Icon from: http://www.potlabicons.com/ -->
                 <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
                     <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
@@ -23,17 +23,17 @@
         </div>
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                <li class="mr-3">
-                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+                <li class="mr-3 active:font-bold">
+                    <a class="inline-block py-2 px-4 text-black no-underline" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Blog</a>
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="{{ url('/blog') }}">Blog</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">About us</a>
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="{{ url('/about-us') }}">About us</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Contact us</a>
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="{{ url('/contact-us') }}">Contact us</a>
                 </li>
             </ul>
             <div id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">

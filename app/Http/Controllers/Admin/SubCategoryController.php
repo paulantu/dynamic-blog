@@ -45,7 +45,7 @@ class SubCategoryController extends Controller
 
         $SubCategories->cat_id = $request->cat_name;
         $SubCategories->subcat_name = $request->sub_cat_name;
-        $SubCategories->subcat_meta_title = Str::lower($request->cat_name);
+        $SubCategories->subcat_meta_title = Str::lower($request->sub_cat_name);
         $SubCategories->created_by = Auth::user()->id;
         $SubCategories->status = 1;
         $SubCategories->slug = Str::slug($request->sub_cat_name, '-');

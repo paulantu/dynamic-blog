@@ -11,7 +11,7 @@
                             d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "
                         />
                     </svg>
-                    LANDING
+                    LETSFLY
                 </a>
             </div>
             <div class="flex-1">
@@ -69,5 +69,7 @@
             </div>
         </div>
     </div>
-    <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a>
+    <div class="justify-center text-center">
+        <a href="#" class="text-gray-500">Developed by Antu Paul</a>
+    </div>
 </footer>

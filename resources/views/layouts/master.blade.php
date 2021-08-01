@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-        Tailwind Starter Template - Landing Page Template: Tailwind Toolbox
+        My blog
     </title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -22,6 +22,7 @@
 </head>
 <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
 <!--Nav-->
+    @include('sweetalert::alert')
     @include('layouts.nav-bar')
 <!--Hero-->
     @yield('content');

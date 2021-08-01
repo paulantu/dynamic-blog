@@ -79,4 +79,18 @@
         return false;
     }
 </script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#description' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+
+    ClassicEditor
+        .create( document.querySelector( '#summary' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+
+</script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>

@@ -9,7 +9,7 @@
     <meta name="author" content="name">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> <!--Replace with your tailwind.css once created-->
@@ -25,6 +25,12 @@
 
     {{--toastr notifier cdn for js--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{{--    ckeditor for blog description textarea--}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+
+{{--    for autocomplete search--}}
+
 
 </head>
 

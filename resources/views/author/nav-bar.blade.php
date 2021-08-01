@@ -24,16 +24,16 @@
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
                 <li class="mr-3">
-                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+                    <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="{{ url('/author') }}">Home</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Blog</a>
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="{{ url('author/blog') }}">Blog</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">About us</a>
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="{{ url('author/about-us') }}">About us</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Contact us</a>
+                    <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="{{ url('author/contact-us') }}">Contact us</a>
                 </li>
             </ul>
 
@@ -46,7 +46,7 @@
                 <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
                     <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
                         <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent hover:text-yellow-700 text-black rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Profile</a>
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent hover:text-yellow-700 text-black rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">My Blog</a>
+                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent hover:text-yellow-700 text-black rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ url('author/my-blog') }}">My Blog</a>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent hover:text-yellow-700 rounded-lg text-black md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
